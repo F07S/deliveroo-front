@@ -1,38 +1,262 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER */
+/* **********************************************************
+********************************************************** */
+header {
+  height: 80px;
+  width: 1210px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header img {
+  width: 165px;
+}
+/* TOP DESCRIPTION */
+/* **********************************************************
+********************************************************** */
+
+.description {
+  height: 260px;
+  width: 1210px;
+  margin: 0 auto;
+  font-family: "Stratos", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.description div {
+  font-size: 32px;
+  padding-bottom: 35px;
+  color: #2e3333;
+}
+
+.description p {
+  font-size: 19px;
+  font-family: "IBM", sans-serif;
+  line-height: 28px;
+  color: #868a8a;
+}
+
+.description img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+/* MAIN */
+/* **********************************************************
+********************************************************** */
+.main {
+  background-color: #f3f5f5;
+  width: 100vw;
+}
+.category {
+  display: flex;
+  margin: 0 auto;
+  width: 1210px;
+  gap: 10px;
+}
+
+.left-side {
+  width: 71%;
+}
+.right-side {
+  width: 29%;
+
+  /* background-color: aqua; */
+}
+
+.meal-container {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.meal-box {
+  width: 850px;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meals:hover {
+  box-shadow: 1em 1em 1em #d9dada;
+}
+
+.title {
+  font-size: 24px;
+  font-family: "Stratos", sans-serif;
+  color: #2e3333;
+}
+
+.meal-title {
+  font-size: 19px;
+  font-family: "IBM", sans-serif;
+  color: #2e3333;
+  line-height: 23px;
+}
+.meal-desc {
+  font-size: 14px;
+  font-family: "IBM", sans-serif;
+  color: #808484;
+  line-height: 20.8px;
+  padding-top: 10px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.meal-box img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+  padding-left: 40px;
+}
+.meals {
+  width: 380px;
+  height: 140px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* PRICE & POPULAR  */
+/* **********************************************************
+********************************************************** */
+.price {
+  font-size: 17px;
+  font-family: "IBM", sans-serif;
+  padding-top: 10px;
+  color: #808484;
+}
+
+.popular {
+  font-size: 14px;
+  padding-top: 10px;
+  font-family: "IBM-bold", sans-serif;
+}
+
+.price-popular-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hidden {
+  display: none;
+}
+
+/* CART  */
+/* **********************************************************
+********************************************************** */
+.panier {
+  width: 355px;
+  min-height: 180px;
+  background-color: #ffffff;
+  font-family: "IBM", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+.panier:hover {
+  box-shadow: 1em 1em 1em #d9dada;
+}
+
+.validate-btn {
+  font-family: "IBM", sans-serif;
+  width: 320px;
+  height: 40px;
+  border: none;
   color: white;
+  font-size: 14px;
+  background-color: #4cccbc;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #2e3333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart-title {
+  /* border: 1px solid red; */
+  width: 180px;
+}
+.cart-item-price {
+  /* border: 1px solid blue; */
+  font-size: 14px;
+  width: 60px;
+  text-align: right;
+}
+.plus-minus {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid green; */
+  width: 60px;
+  color: #868a8a;
+  gap: 3px;
+}
+.hide {
+  display: none;
+}
+
+.results {
+  margin-top: 25px;
+  width: 90%;
+}
+
+.subTotal {
+  border-top: 1px solid #bcbdbd;
+  font-size: 14px;
+  padding-top: 25px;
+  color: #2e3333;
+  display: flex;
+  justify-content: space-between;
+}
+.feeTotal {
+  font-size: 14px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #2e3333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  border-top: 1px solid #bcbdbd;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* FOOTER  */
+/* **********************************************************
+********************************************************** */
+
+footer {
+  height: 200px;
+  background-color: #f3f5f5;
 }
